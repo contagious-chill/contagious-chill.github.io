@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'DM Sans Black';
+  src: url(../assets/fonts/DMSans-Black.ttf);
+}
+@font-face {
+  font-family: 'DM Sans Regular';
+  src: url(../assets/fonts/DMSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'DM Sans Light';
+  src: url(../assets/fonts/DMSans-Light.ttf);
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url(../assets/fonts/BebasNeue-Regular.ttf);
+}
+
+* {
+  font-family: 'DM Sans Regular', sans-serif;
+}
+
+body {
+  /* height: 100vh; */
+  background: #e8e8e6;
+  font-size: 14px;
+  /* regular fonts/paragraphs */
+  font-family: 'DM Sans Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #420054;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.header-image-1 {
+  flex-direction: column;
+  /* position: absolute; */
+  padding-top: 130px; /* needs to be height adjustable so that it is mobile friendly*/
+  /* possible solution to margin-top -- https://stackoverflow.com/questions/15293008/absolute-center-a-fluid-div/15293191#15293191 */
+  width: 80vw;
+  height: auto;
+  max-width: 500px;
+  transform: translateY(15px);
+  justify-content: center;
+  z-index: -1;
+}
+
+.header-image-2 {
+  flex-direction: column;
+  position: absolute;
+  padding-top: 130px; /* needs to be height adjustable so that it is mobile friendly*/
+  /* margin-top: 100px; */
+  /* possible solution to margin-top -- https://stackoverflow.com/questions/15293008/absolute-center-a-fluid-div/15293191#15293191 */
+  width: 85vw;
+  height: auto;
+  max-width: 700px;
+  justify-content: center;
+  z-index: -2;
+  transform: translate(0px, -300px);
+  /* margin-bottom: 0; */
+  /* change color from a black object */
+  /* filter: invert(8%) sepia(89%) saturate(2424%) hue-rotate(275deg) brightness(115%) contrast(120%); */
+  /* to change the black - https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.nav {
+  display: grid;
+  gap: 15px; /* 10px */
+  margin-top: 0;
+  padding-top: 0;
+  /* display: ; */
+  position: relative;
+
+  button {
+    background: rgba(232, 232, 230, 0.95);
+    font-size: 2.2rem; /*previously 1.8rem */
+    letter-spacing: 0.05rem;
+    width: 85vw;
+    max-width: 450px;
+    max-height: 112.5px;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 2.2rem;
+    color: #420054;
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #420054;
+
+    &:hover {
+      background-color: #420054;
+      opacity: 100%;
+      color: #e8e8e6;
+      border-style: solid;
+      border-width: 8px;
+    }
+  }
+}
+
+.link-buttons {
+  display: flex;
+  padding: 0.5rem;
+  gap: 6px;
+}
+
+.fa {
+  /* display: flex; */
+  margin-top: 0.15em;
+  padding: 0.7rem; /*previous .625rem*/
+  font-size: 1.75rem; /*1rem*/
+  text-align: center;
+  text-decoration: none;
+  background-color: #e8e8e6;
+  color: #420054;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+  /* justify-content: space-between; */
+
+  &:hover {
+    background-color: #420054;
+    color: #e8e8e6;
+    border-color: #e8e8e6;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  font-size: 0.75rem;
+  padding: 0.5%;
+  position: relative;
+  transform: translateX(130px);
+  font-family: 'DM Sans Black';
+}
+
+footer.shelter {
+  transform: translate(195px, 10px);
+}
+
+.background-swirl {
+  position: absolute;
+  z-index: -5;
+  width: 3000px;
+  transform: translate(-950px, -500px);
+  rotate: -45deg;
+  /* transform: translate(0px, -250px); */
+  /* width: 5px; */
+  /* height: 200px; */
+}
+
+/* SVG Information */
+.svg-3,
+.svg-3-thick,
+.svg-2,
+.svg-2-thick,
+.upper,
+.lower,
+.upper-thick,
+.lower-thick {
+  position: absolute;
+}
+
+.svg-2,
+.svg-3 {
+  z-index: -2;
+}
+.svg-2-thick,
+.svg-3-thick {
+  z-index: -3;
+  /* stroke-width: 3px; */
+}
+
+.svg-2,
+.svg-2-thick, .svg-6 {
+  transform: translate(-375px, -570px);
+  /* transform: translate(-625px, -645px); */
+  /* transform: translate(-250px, -315px); */
+}
+
+.svg-3,
+.svg-3-thick {
+  transform: translate(-470px, -365px);
+  rotate: 11deg;
+  /* transform: translate(-250px, -265px); */
+}
+
+.upper {
+  /* transform: scale(.35); */
+  rotate: -4deg;
+  transform: translate(-260px, -700px);
+}
+.upper-thick {
+  rotate: -4deg;
+  transform: translate(-280px, -710px);
+}
+
+.lower {
+  rotate: -7deg;
+  transform: translate(-300px, -330px);
+  /* tilted */
+  /* transform: translate(-340px, -280px); */
+}
+.lower-thick {
+  rotate: -7deg;
+  transform: translate(-305px, -340px);
+  /* tilted */
+  /* transform: translate(-350px, -290px); */
+}
+
+.upper, .lower {
+  z-index: -3;
+}
+
+.upper-thick, .lower-thick {
+  z-index: -4;
+}
+
+
+
+
+
+
+
+
+
+/* Shelter Page Styling */
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.web-content {
+  z-index: 10;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  min-height: 800px;
+}
+
+.shelter-info {
+  width: 75vw;
+  max-width: 500px;
+  min-height: 600px;
+  /* height: 75vh; */
+  background-color: #e8e8e6;
+  text-align: center;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  color: #420054;
+  border: solid;
+  border-width: 8px;
+  border-color: #420054;
+}
+
+h1 {
+  font-size: 1.8rem; /*2.5rem*/
+  line-height: 2.2rem;
+  letter-spacing: 0.3rem;
+  text-indent: 0.3rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+  font-size: 0.8rem;
+  font-family: 'DM Sans Regular', sans-serif;
+}
+
+p + p {
+  margin-top: 20px;
+}
+
+button.shelter {
+  color: #E8E8E6;
+  background-color: #420054;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  text-indent: 0.3rem; /*balance out the spacing*/
+  letter-spacing: 0.3rem;
+  max-width: 400px;
+  max-height: 150px;
+  padding: 0.75rem;
+  margin-top: 10px;
+  border: none;
+  text-align: center;
+
+  &:hover {
+    opacity: 85%;
+  }
+}
+
+.lost-link {
+  align-items: bottom;
+  font-size: 0.75rem;
+  padding: 1rem;
+}
+
+.link {
+  text-decoration: underline;
+  color: #420054;
+  &:hover {
+    opacity: 75%;
+  }
+}
+
+.gradient {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* select divs within the gradient */
+.gradient div {
+  position: absolute;
+  animation: gradient 5s infinite;
+  /* gradient with 4s keyframes and looping (infinite) */
+  z-index: -1;
+}
+
+/* keyframes for animation with the "identifier of gradient" */
+/* 50% in this case would be the 2s mark */
+@keyframes gradient {
+  50% {
+    transform: scale(1.3) translate(150px); /*make colors bigger and move them on horizontal and vertical axis*/
+  }
+}
+
+/* select first div - dark purple*/
+.gradient div:nth-child(1) {
+  height: 100%;
+  width: 100%;
+  background-color: #AFFC41;
+  animation-delay: 12.5s;
+}
+
+/* light purple */
+.gradient div:nth-child(2) {
+  height: 80%;
+  width: 70%;
+  background-color: #7e17ba;
+  /* moves this box so it is not directly on top of other color */
+  top: -12%;
+  right: -12%;
+  /* animation delay */
+  animation-delay: 20s;
+}
+/* orange */
+.gradient div:nth-child(3) {
+  height: 50%;
+  width: 75%;
+  background-color: #420054;
+  bottom: -10%;
+  left: -5%;
+  animation-delay: 20s;
+}
+
+.gradient div:nth-child(4) {
+  height: 65%;
+  width: 80%;
+  background-color: #1DD3B0;
+  bottom: -15%;
+  left: -20%;
+  animation-delay: 15s;
+}
+
+.gradient div:nth-child(5) {
+  height: 70%;
+  width: 65%;
+  background-color: #420054;
+  bottom: 0%;
+  right: -50%;
+  animation-delay: 12.5s;
+}
+
+.gradient::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(200px);
+  /* blur to disguise boxes */
+}
